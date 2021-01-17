@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SecondViewController : UIViewController
 
+- (id)initWithChoice:(NSNumber *)choice;
+
 @end
 
 NS_ASSUME_NONNULL_END

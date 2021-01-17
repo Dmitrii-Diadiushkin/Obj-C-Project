@@ -6,6 +6,7 @@
 //
 
 #import "SceneDelegate.h"
+#import "MainViewController.h"
 
 @interface SceneDelegate ()
 
@@ -18,6 +19,14 @@
     CGRect windowFrame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame: windowFrame];
     [self.window makeKeyAndVisible];
+    
+    MainViewController *initialViewController = [[MainViewController alloc] init];
+    initialViewController.view.backgroundColor = [UIColor whiteColor];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: initialViewController];
+    self.window.rootViewController = navigationController;
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    [self.window setWindowScene: windowScene];
 }
 
 
